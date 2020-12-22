@@ -32,7 +32,6 @@ public class ClientService {
         return clientRepository
                 .findAll()
                 .stream()
-                .filter(client -> client.getFirstName().equals("Gabriel"))
                 .map(client -> new ClientDto(client.getClientId(), client.getFirstName()))
                 .collect(Collectors.toList());
     }
