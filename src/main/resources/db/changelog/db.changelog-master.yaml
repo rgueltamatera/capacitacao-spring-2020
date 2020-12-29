@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: criando a tabela client
+      author: robin guelta
+      changes:
+        - createTable:
+            tableName: client
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: client_pkey
+                  name: client_id
+                  type: int
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+              - column:
+                  name: last_name
+                  type: VARCHAR(255)
+
